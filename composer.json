@@ -1,0 +1,43 @@
+{
+    "name": "kallbuloso/laravel-packager-commands",
+    "description": "Artisan make Commands when using https://github.com/Jeroen-G/laravel-packager thereby accelerating your development of Laravel Packages.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amaral karl",
+            "email": "kallbuloso@kallbuloso.com.br",
+            "homepage": "https://www.kallbuloso.com.br"
+        }
+    ],
+    "homepage": "https://github.com/kallbuloso/laravel-packager-commands",
+    "keywords": ["Laravel", "LaravelPackagerCommands"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "kallbuloso\\LaravelPackagerCommands\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "kallbuloso\\LaravelPackagerCommands\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "kallbuloso\\LaravelPackagerCommands\\LaravelPackagerCommandsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPackagerCommands": "kallbuloso\\LaravelPackagerCommands\\Facades\\LaravelPackagerCommands"
+            }
+        }
+    }
+}
